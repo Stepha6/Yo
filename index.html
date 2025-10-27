@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Stepha</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f7f4ef;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #7a5c58;
+            color: white;
+            padding: 40px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0 0 10px 0;
+        }
+        header nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #f0d9d7;
+        }
+        section {
+            padding: 40px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #a67873;
+        }
+        section p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #a67873;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+            font-size: 1.1em;
+        }
+        a.button:hover {
+            background-color: #8c5d57;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            font-style: italic;
+        }
+        #qr {
+            margin-top: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery div {
+            width: 200px;
+            height: 150px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 1em;
+            color: #555;
+        }
+        .skills {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .skill-bar {
+            background-color: #ddd;
+            border-radius: 10px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .skill-bar div {
+            height: 20px;
+            background-color: #a67873;
+            width: 0;
+            transition: width 1s;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hola, soy Stepha</h1>
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#musica">Música</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#proyectos">Habilidades</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#extras">Extras</a>
+        <a href="#qr-section">QR</a>
+    </nav>
+</header>
+
+<section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Estudio Ingeniería Biomédica, amo el piano y disfruto de la música clásica. Aquí puedes conocer mis logros y proyectos personales.</p>
+</section>
+
+<section id="musica">
+    <h2>Música</h2>
+    <p>Mis piezas favoritas de piano y compositores que me inspiran:</p>
+    <ul>
+        <li>Beethoven - Sonata Claro de Luna</li>
+        <li>Vivaldi - Las Cuatro Estaciones</li>
+        <li>Chopin - Nocturnos</li>
+    </ul>
+    <a class="button" href="https://spotify.link/Mz4RlV9iNXb" target="_blank">🎧 Escucha mi playlist favorita</a>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <p>Tocar piano, leer libros, practicar inglés y explorar nuevas ideas creativas.</p>
+</section>
+
+
+<section id="proyectos">
+    <h2>Habilidades</h2>
+    <div class="skills">
+        <p>Piano</p>
+        <div class="skill-bar"><div style="width: 90%;"></div></div>
+        <p>Inglés</p>
+        <div class="skill-bar"><div style="width: 70%;"></div></div>
+        <p>Programación / Ingeniería</p>
+        <div class="skill-bar"><div style="width: 80%;"></div></div>
+    </div>
+</section>
+
+<section id="contacto">
+    <h2>Contacto / Redes</h2>
+    <p>Envíame un mensaje o sígueme en mis redes:</p>
+    <a class="button" href="https://pin.it/3hBWOSJbP">📌 Pinterest</a>
+    <a class="button" href="https://www.instagram.com/stephaniaquiroga?igsh=YnN1NnY0dHk1cXlu" target="_blank">📸 Instagram</a>
+    <a class="button" href="https://x.com/stephaniaq2006?t=qMYhbKVchK91w4MwkXrGFQ&s=08" target="_blank">🐦 X</a>
+</section>
+
+<section id="extras">
+    <h2>Extras creativos</h2>
+    <p>Frases y cosas que me inspiran:</p>
+    <ul>
+        <li>“Cada día es una nueva oportunidad para aprender.”</li>
+        <li>Libros, música y momentos que hacen volar la imaginación.</li>
+        <li>Proyectos creativos y notas personales.</li>
+    </ul>
+</section>
+
+<section id="qr-section">
+    <h2>Accede rápido desde tu teléfono</h2>
+    <canvas id="qr"></canvas>
+</section>
+
+<footer>
+    <p>© 2025 Stepha</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script>
+    const url = window.location.href;
+    QRCode.toCanvas(document.getElementById('qr'), url, function (error) {
+        if (error) console.error(error);
+    });
+
+    // Animación de barras de habilidades
+    window.addEventListener('load', () => {
+        const bars = document.querySelectorAll('.skill-bar div');
+        bars.forEach(bar => {
+            bar.style.width = bar.style.width;
+        });
+    });
+</script>
+
+</body>
+</html>
